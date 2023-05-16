@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Inicio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-searchbar [(ngModel)]="palabra" (ionChange)="buscar()"></ion-searchbar>
+
+  <ion-card *ngFor="let item of articulos" (click)="irAlArticulo(item)">
+    <div class="contenedor-imagen">
+      <ion-img [src]="'https://www.hostcatedral.com/api/publicacion/' + item.img"></ion-img>
+    </div>
+    <div class="contenedor-contenido">
+      <ion-card-header>
+        <ion-card-title>{{item.Titulo}}</ion-card-title>
+        <ion-card-subtitle>{{item.Contenido}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card-subtitle color="dark" style="text-align: right;">{{item.Precio}} Gs.</ion-card-subtitle>
+      </ion-card-content>
+    </div>
+  </ion-card>
+</ion-content>

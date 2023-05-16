@@ -1,0 +1,7 @@
+{
+  "name": "ClasiApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

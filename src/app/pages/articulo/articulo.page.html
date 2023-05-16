@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Articulo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Articulo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-img [src]="'https://www.hostcatedral.com/api/publicacion/' + articulo.img"></ion-img>
+      <ion-card-title>{{articulo.Titulo}}</ion-card-title>
+      <ion-card-subtitle>{{articulo.Contenido}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="contenedor-derecha">
+        <ion-card-subtitle color="dark" style="text-align: right;">{{articulo.Precio}} Gs.</ion-card-subtitle>
+      </div>
+      <div class="contenedor-izquierda">
+        <ion-button [disabled]="true" color="medium">{{articulo.Estado}}</ion-button>
+      </div>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>
